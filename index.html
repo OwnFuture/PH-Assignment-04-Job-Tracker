@@ -39,7 +39,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 md:justify-between gap-2 md:px-2">
             <div class="bg-white p-4 rounded-[10px]">
                 <p class="text-[#323B49] text-2xl">Total</p>
-                <p id="total-count" class="font-bold text-[18px]">8</p>
+                <p id="total-count" class="font-bold text-[18px]">0</p>
             </div>
             <div  class="bg-white p-4 rounded-[10px]">
                 <p class="text-[#323B49] text-2xl">Interview</p>
@@ -60,18 +60,37 @@
         <!--Title div-->
         <div class="section-title flex justify-between p-3 mb-3">
             <h2>Available Jobs</h2>
-            <p id="section-job-count">8 Jobs</p>
+            <p id="section-job-count">0 Jobs</p>
         </div>
 
         <!--Button div-->
 
         <div>
-            <button id="all-btn" class="btn btn-primary">All</button>
-            <button id="interview-btn" class="btn">Interview</button>
-            <button id="rejected-btn" class="btn">Rejected</button>
+            <button onclick="toggleStyle('all-btn')" id="all-btn" class="btn btn-primary">All</button>
+            <button onclick="toggleStyle('interview-btn')"  id="interview-btn" class="btn">Interview</button>
+            <button onclick="toggleStyle('rejected-btn')"  id="rejected-btn" class="btn">Rejected</button>
         </div>
 
         <!--Job section div-->
+
+        <div id="job-container-id" class="job-container">
+
+            <div class="bg-white mt-7 flex justify-between p-4 rounded-md mx-4 ">
+            <div class="left space-y-2">
+                <h2 class="text-[#002C5C] font-bold text-[20px]">Mobile First Corp</h2>
+                <p>React Native Developer</p>
+                <p>Remote • Full-time • $130,000 - $175,000</p>
+                <p class="bg-base-300 inline-block p-3 rounded-[5px]">Not Applied</p> <!--Status-->
+                <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <button class="btn btn-success">Interview</button>
+                <button class="btn btn-error">Rejected</button>
+            </div>
+
+            <div class="right">
+                <button class="btn rounded-full btn-error"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
 
         <div class="bg-white mt-7 flex justify-between p-4 rounded-md mx-4 ">
             <div class="left space-y-2">
@@ -90,7 +109,43 @@
             </div>
         </div>
 
+
+        <div class="bg-white mt-7 flex justify-between p-4 rounded-md mx-4 ">
+            <div class="left space-y-2">
+                <h2 class="text-[#002C5C] font-bold text-[20px]">Mobile First Corp</h2>
+                <p>React Native Developer</p>
+                <p>Remote • Full-time • $130,000 - $175,000</p>
+                <p class="bg-base-300 inline-block p-3 rounded-[5px]">Not Applied</p> <!--Status-->
+                <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <button class="btn btn-success">Interview</button>
+                <button class="btn btn-error">Rejected</button>
+            </div>
+
+            <div class="right">
+                <button class="btn rounded-full btn-error"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+
+        
+
+        </div>
+
+
+        <!--No job available section-->
+
+        <div id="no-job" class="bg-white mt-7 hidden">
+            <img src="/B13-A4-PH-Job-Tracker/jobs.png" alt="" class="mx-auto">
+            <h2 class="text-[#002C5C] font-bold text-[20px] text-center">No Jobs Available</h2>
+            <p class="text-center text-[#64748B]">Check back soon for new job opportunities</p>
+        </div>
+
     </section>
+
+
+
+
+    <script src="/script.js"></script>
 
 </body>
 </html>
