@@ -12,6 +12,10 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!--Font awesome-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,23 +33,64 @@
     
     <!--Header-->
 
-    <header class="md:w-[70%] mx-auto bg-base-300 space-y-4 pb-3 border-b border-amber-50">
+    <header class="md:w-[70%] mx-auto bg-base-300 space-y-4 pb-3 border-b border-amber-50 mb-6">
         <h2 class="text-[#002C5C] text-3xl md:text-5xl font-bold">Job Application Tracker</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 md:justify-between gap-2 md:px-2">
             <div class="bg-white p-4 rounded-[10px]">
                 <p class="text-[#323B49] text-2xl">Total</p>
-                <p class="font-bold text-[18px]">8</p>
+                <p id="total-count" class="font-bold text-[18px]">8</p>
             </div>
             <div  class="bg-white p-4 rounded-[10px]">
                 <p class="text-[#323B49] text-2xl">Interview</p>
-                <p class="font-bold text-[18px] text-green-600">0</p>
+                <p id="interview-count" class="font-bold text-[18px] text-green-600">0</p>
             </div>
             <div  class="bg-white p-4 rounded-[10px]">
                 <p class="text-[#323B49] text-2xl">Rejected</p>
-                <p class="font-bold text-[18px] text-red-600">0</p>
+                <p id="rejected-count" class="font-bold text-[18px] text-red-600">0</p>
             </div>
         </div>
     </header>
+
+
+    <!--main section-->
+
+    <section class="md:w-[70%] mx-auto bg-base-300">
+
+        <!--Title div-->
+        <div class="section-title flex justify-between p-3 mb-3">
+            <h2>Available Jobs</h2>
+            <p id="section-job-count">8 Jobs</p>
+        </div>
+
+        <!--Button div-->
+
+        <div>
+            <button id="all-btn" class="btn btn-primary">All</button>
+            <button id="interview-btn" class="btn">Interview</button>
+            <button id="rejected-btn" class="btn">Rejected</button>
+        </div>
+
+        <!--Job section div-->
+
+        <div class="bg-white mt-7 flex justify-between p-4 rounded-md mx-4 ">
+            <div class="left space-y-2">
+                <h2 class="text-[#002C5C] font-bold text-[20px]">Mobile First Corp</h2>
+                <p>React Native Developer</p>
+                <p>Remote • Full-time • $130,000 - $175,000</p>
+                <p class="bg-base-300 inline-block p-3 rounded-[5px]">Not Applied</p> <!--Status-->
+                <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                <button class="btn btn-success">Interview</button>
+                <button class="btn btn-error">Rejected</button>
+            </div>
+
+            <div class="right">
+                <button class="btn rounded-full btn-error"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+
+    </section>
+
 </body>
 </html>
