@@ -195,7 +195,7 @@ function updateRejected(){ rejectedCount.innerText = rejectedList.length; }
 function showNoJobs(){
     filterSection.innerHTML = `
         <div class="bg-white mt-7 text-center p-5 rounded-md mx-4">
-            <img src="/B13-A4-PH-Job-Tracker/jobs.png" class="mx-auto" alt="No Jobs">
+            <img src="./B13-A4-PH-Job-Tracker/jobs.png" class="mx-auto" alt="No Jobs">
             <h2 class="text-[#002C5C] font-bold text-[20px] mt-3">No Jobs Available</h2>
             <p class="text-[#64748B]">Check back soon for new job opportunities</p>
         </div>
